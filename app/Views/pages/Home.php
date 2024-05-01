@@ -12,14 +12,14 @@
             <div class="col-5 col-sm-6 col-lg-3">
                 <div class="header-logo">
                     <a href="index.html">
-                        <img class="logo-main" src="/assets/images/logo.png" width="200" height="120" alt="Logo" />
+                        <img class="logo-main" src="/assets/images/Logo-MS-Glow.png" width="200" height="120" alt="Logo" />
                     </a>
                 </div>
             </div>
             <div class="col-lg-6 d-none d-lg-block">
                 <div class="header-navigation">
                     <ul class="main-nav justify-content-start">
-                        <li><a href="/produk/index">Dashboard</a></li>
+                        <li><a href="/user/dashboard">Dashboard</a></li>
                         <li class="has-submenu"><a href="/">home</a>
                             <ul class="submenu-nav">
                                 <li><a href="index.html">Home One</a></li>
@@ -464,8 +464,8 @@
                                     </div>
                                     <h4 class="title"><a href="product-details.html">Luminos Glowing Serum</a></h4>
                                     <div class="prices">
-                                        <span class="price">Rp. 150.000</span>
-                                        
+                                        <span class="price">$210.00</span>
+                                        <span class="price-old">300.00</span>
                                     </div>
                                     <div class="product-action">
                                         <button type="button" class="product-action-btn action-btn-cart" data-bs-toggle="modal" data-bs-target="#action-CartAddModal">

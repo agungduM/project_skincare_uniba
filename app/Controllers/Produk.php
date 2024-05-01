@@ -17,10 +17,10 @@ class Produk extends BaseController
 
         $data = [
             'title' => 'List Produk',
-            'produk' => $this->produkModel->getProduk()
+            // 'produk' => $this->produkModel->getProduk()
         ];
 
-    return view('produk/index', $data);
+    return view('user/list_product', $data);
     }
 
     public function detail($id) {
@@ -29,6 +29,16 @@ class Produk extends BaseController
             'produk' => $this->produkModel->getProduk($id)
         ];
     return view('produk/detail', $data);
+    }
+
+    public function tambahKategori() {
+        $this->produkModel->saveKategori([
+            'id' => $this->request->getVar('id'),
+            'category' => $this->request->getVar('kategori')
+        ]);
+
+        session()->setFlashdata('pesan', 'kategori berhasil ditambahkan.....');
+
     }
 }
 

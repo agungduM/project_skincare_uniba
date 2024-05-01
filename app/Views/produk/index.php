@@ -1,25 +1,57 @@
-<?= $this->extend('/layout/template'); ?>
+<?= $this->extend('layout/template_dashboard'); ?> 
 
-<?= $this->section('content'); ?>
+<?= $this->section('dashboard'); ?>
 
-<section>
-    
-    <div class="row">
-    <?php foreach ($produk as $barang) : ?>
-        <div class="col-3">
-            <div class="card" style="width: 18rem;">
-                <img src="/assets/images/<?= $barang['sampul']; ?>" class="card-img-top">
-                <div class="card-body">
-                    <h5 class="card-title"><?= $barang['nm_produk']; ?></h5>
-                    <p class="card-text"><?= $barang['deskripsi']; ?></p>
-                    <h4 class="card-text">Rp <?= number_format($barang['harga'],2); ?></h4>
-                    <a href="/produk/detail/<?= $barang['id'] ; ?>" class="btn btn-primary">Detail</a>
+<!-- page content -->
+        
+
+          <div class="clearfix"></div>
+
+            <div class="row">
+              <div class="col-md-12">
+                <div class="x_panel">
+                  <div class="x_content">
+
+                    <div class="row">
+                      <div class="col-md-55">
+                        <div class="thumbnail">
+                          <div class="image view view-first">
+                            <img style="width: 100%; display: block;" src="images/media.jpg" alt="image" />
+                            <div class="mask">
+                              <p>Your Text</p>
+                              <div class="tools tools-bottom">
+                                <a href="#"><i class="fa fa-link"></i></a>
+                                <a href="#"><i class="fa fa-pencil"></i></a>
+                                <a href="#"><i class="fa fa-times"></i></a>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="caption">
+                            <p>Snow and Ice Incoming for the South</p>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
                 </div>
+              </div>
             </div>
-        </div>
-        <?php endforeach; ?>
-    </div>
-   
-</section>
+          </div>
+
+
+      
+
+          <div class="dropup-center dropup btn-add position-absolute  p-3">
+            <a class="" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+               <i class="fa-solid fa-plus fa-2xl" style="color: #FFFF;"></i>
+            </a>
+            <ul class="dropdown-menu">
+              <li id="add-category"><a class="dropdown-item fw-bolder" href="#"> Tambah Kategori Produk </a></li>
+              <li><a class="dropdown-item fw-bolder" href="/dashboard/produk/tambah_produk"> Tambah Item Produk</a></li>
+            </ul>
+          </div>
+    
+        <!-- /page content -->
+
 
 <?= $this->endSection(); ?>
